@@ -95,3 +95,8 @@ span{
 .close-layerMask2:hover {
 	color: #f4f4f4;
 }
+@media (max-width: 768px) { 
+  .lathu {
+    font-size: 16pt !important; 
+  }
+}
