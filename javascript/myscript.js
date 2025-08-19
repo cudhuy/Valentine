@@ -131,13 +131,13 @@ getclickf.addEventListener('click', function () {
 
 	var theLetter = document.querySelector('.lathu');
 	theLetter.style.position = 'relative';
-	theLetter.style.top = '35px';
+	theLetter.style.top = '25px';
 
 	anime({
 		targets: divLayer,
 		easing: 'easeOutSine',
 		scaleY: 1,
-		duration: 300,
+		duration: 400,
 	});
 
 	var heyCrush = document.querySelectorAll('.crush path');
@@ -211,8 +211,12 @@ var authorS = document.querySelector('.main');
 authorS.insertAdjacentHTML('afterend', '');
 
 document.querySelector('.Description .modal-title').innerHTML =
-	' Nhịp tim như vậy là vì';
-document.querySelector('.Description .modal-body').innerHTML = 'Anh thích em ';
+	'💕 Thông điệp từ trái tim 💕';
+document.querySelector('.Description .modal-body').innerHTML =
+	'<p>Ngọc yêu à,</p>' +
+	'<p>Em có biết không, mỗi ngày trôi qua, anh lại yêu em nhiều hơn một chút. Trái tim anh đập thật mạnh mỗi khi nghĩ về em.</p>' +
+	'<p>Anh muốn nói với em rằng: <strong>"Em là điều tuyệt vời nhất đã đến với cuộc đời anh"</strong>.</p>' +
+	'<p>Yêu em thật nhiều! 💖</p>';
 
 var author = document.querySelector('.author .me');
 author.style.opacity = '0.5';

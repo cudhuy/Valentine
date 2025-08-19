@@ -1,102 +1,173 @@
-html, body {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
+html,
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 body {
-	background: url('https://goo.gl/jPMU7X');
-	background-size: cover;
-	background-repeat: none;
-	display: flex;
-	align-items: center;
-	position: relative;
+    background: url('https://goo.gl/jPMU7X');
+    background-size: cover;
+    background-repeat: none;
+    background-color: #ffeef7c1;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
+
 .firstclk {
-	font-weight: 500;
-	font-size: 28pt;
-	font-family: 'Sacramento', cursive;
-	color: #6d3842;
-	cursor: pointer;
+    font-weight: 500;
+    font-size: 32pt;
+    font-family: 'Sacramento', cursive;
+    color: #6d3842;
+    cursor: pointer;
 }
+
 .layerMask {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	background: url('https://goo.gl/mcT1yC');
-	background-size: cover;
-	background-repeat: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: url('https://goo.gl/mcT1yC');
+    background-size: cover;
+    background-repeat: none;
 }
 
 .layerMask2 {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: 2;
-	background-color: pink;
-	background-size: cover;
-	background-repeat: repeat-y;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: pink;
+    background-size: cover;
+    background-repeat: repeat-y;
 }
 
-.Description .sup{
-	display: inline-block;
-	color: #ea4335;
+.Description .sup {
+    display: inline-block;
+    color: #ea4335;
 }
+
 .drawHeart img {
-	position:absolute;
-	height: 100%;
-	width: 100%;
-}
-span{
-	display: inline-block;
-	white-space: pre;
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
-.Description .sup:hover{
-	color: #ffb8c0;
+span {
+    display: inline-block;
+    white-space: pre;
+}
+
+.Description .sup:hover {
+    color: #ffb8c0;
 }
 
 .box {
-	position: relative;
-	display: inline-block;
+    position: relative;
+    display: inline-block;
 }
+
 .child {
-	position: absolute;
-	background-color: #f15371;
-	width: 100%;
-	height: 80%;
-	top: 0;
-	left: 0;
+    position: absolute;
+    background-color: #f15371;
+    width: 100%;
+    height: 80%;
+    top: 0;
+    left: 0;
 }
 
 .me {
-	font-size: 10pt;
-	color: gray;
+    font-size: 10pt;
+    color: gray;
 }
 
 .author .me {
-	cursor: default;
+    cursor: default;
 }
-.author .me a{
-	cursor: default;
-	font-size: 4pt;
+
+.author .me a {
+    cursor: default;
+    font-size: 4pt;
 }
 
 .music {
-	display: none;
+    display: none;
 }
 
 #crush {
-	width: 100%;
-	height: 37%;
+    width: 100%;
+    height: 37%;
 }
+
 .close-layerMask2:hover {
-	color: #f4f4f4;
+    color: #f4f4f4;
 }
-@media (max-width: 768px) { 
-  .lathu {
-    font-size: 16pt !important; 
-  }
+
+.tamthu {
+    font-size: clamp(16px, 4vw, 20px);
+    color: #6d3842;
+    padding: auto 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.lathu {
+    font-size: clamp(40px, 8vw, 60px);
+}
+
+.btn {
+    font-size: 16pt;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        overflow-x: hidden;
+        margin-top: 6vw;
+    }
+
+    /* Lớp phủ full màn hình */
+    .layerMask,
+    .layerMask2 {
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Tiêu đề Click Here! */
+    .firstclk {
+        font-size: 28pt;
+        padding: 0 20px;
+        margin-left: 6vw;
+    }
+
+    /* SVG trái tim giữa màn hình */
+    .drawHeart svg {
+        width: 100vw;
+        height: auto;
+    }
+
+    /* Lá thư & chữ chú thích */
+    .tamthu {
+        font-size: 18pt;
+        padding: 0 15px 20px;
+        margin-top: 6vw;
+    }
+
+    /* Modal nội dung thư */
+    .modal-dialog {
+        margin: 10px;
+    }
+
+    .lathu {
+        font-size: 50pt;
+        margin-left: 6vw;
+    }
+
+    .btn {
+        font-size: 18pt;
+        margin-top: 20px;
+    }
 }

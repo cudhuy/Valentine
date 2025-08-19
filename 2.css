@@ -1,37 +1,95 @@
-.thuTitle {
-	padding: 20px;
-	background-color: #ff9595;
-	color: #523939;
-	font-family: 'Dancing Script', cursive;
-	font-size: 26pt;
-}
-
-.tamthu {
-	font-family: 'Dancing Script', cursive;
-	font-size: 18pt;
-}
-
-.content {
-	background-color: #ffb2b2;
+/* Reset mặc định */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: transparent;
 }
 
 body {
-	background-color: pink;
+    background-color: #ffeef7c1;
 }
+
+/* Canvas trái tim */
+#pinkboard {
+    position: fixed;
+    top: 8%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    /* nằm trên body, dưới nội dung */
+}
+
+/* Tiêu đề thư */
+.thuTitle {
+    padding: 20px;
+    background-color: #ff9595;
+    color: #523939;
+    font-family: 'Dancing Script', cursive;
+    font-size: 26pt;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Nội dung thư */
+.tamthu {
+    font-family: 'Dancing Script', cursive;
+    font-size: 18pt;
+    line-height: 1.6;
+}
+
+/* Khung thư */
+.content {
+    background-color: #ffb2b252;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Nội dung thư luôn nổi lên trên canvas */
+.thu {
+    position: relative;
+    z-index: 1;
+}
+
+/* Một số hiệu ứng chữ */
 span {
-	display: inline-block;
-	white-space: pre;
+    display: inline-block;
+    white-space: pre;
 }
 
 .iloveyou {
-	position: relative;
+    position: relative;
 }
 
 .mask {
-	position: absolute;
-	background-color: #ea2447;
-	width: 100%;
-	height:100%;
-	top: 0;
-	left: 0;
+    position: absolute;
+    background-color: #ea2447;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 640px) {
+    .tamthu {
+        font-size: 16pt;
+        padding: 15px;
+    }
+
+    .thuTitle {
+        font-size: 22pt;
+        padding: 15px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .tamthu {
+        font-size: 20pt;
+    }
+
+    .thuTitle {
+        font-size: 28pt;
+    }
 }
